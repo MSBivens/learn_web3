@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Web3</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header class="header">
@@ -16,7 +17,10 @@
     </header>
     <body class="container">
         <div id="main-content">
-            <div>Podcasts</div>
+            <div>
+                <!-- <img src="flask_app/static/images/img_podcasts.png" alt="podcasts" > -->
+                <img src= {{ url_for('static', filename = 'images/img_podcasts.png') }} alt="podcasts" class="resource-cover">
+            </div>
             <div>Newsletters</div>
             <div>Discords</div>
             <div>Twitter Accounts</div>
