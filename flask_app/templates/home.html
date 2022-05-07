@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Web3</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <!-- type="text/css"  -->
 </head>
 <body>
     <header class="header">
@@ -15,7 +16,8 @@
             <p>Suggest a Resource</p>
         </nav>
     </header>
-    <main class="lg:container lg:mx-auto">
+    <main class="bg-black-300">
+        <!-- lg:container lg:mx-auto -->
         <div class="grid-cols-3" id="main-content">
             <div>
                 <img src= {{ url_for('static', filename = 'images/img_podcasts.png') }} alt="podcasts" class="resource-cover">
