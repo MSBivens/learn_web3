@@ -18,13 +18,19 @@
     <body class="container">
         <div id="main-content">
             <div>
-                <!-- <img src="flask_app/static/images/img_podcasts.png" alt="podcasts" > -->
                 <img src= {{ url_for('static', filename = 'images/img_podcasts.png') }} alt="podcasts" class="resource-cover">
             </div>
-            <div>Newsletters</div>
-            <div>Discords</div>
-            <div>Twitter Accounts</div>
-            <div>For Developers</div>
+            <div>
+                <img src= {{ url_for('static', filename = 'images/img_newsletters.png') }} alt="newsletters" class="resource-cover">
+            </div>
+            <div>
+                <img src= {{ url_for('static', filename = 'images/img_discord.png') }} alt="discord" class="resource-cover">
+            </div>
+            <div>
+                <img src= {{ url_for('static', filename = 'images/img_twitter.png') }} alt="twitter" class="resource-cover">
+            </div>
+                <img src= {{ url_for('static', filename = 'images/img_dev.png') }} alt="dev" class="resource-cover">
+            </div>
         </div>
     </body>
 </body>
