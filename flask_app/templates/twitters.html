@@ -7,6 +7,18 @@
     <title>Learn Web3</title>
 </head>
 <body>
-    
+    <header></header>
+    <body class="container">
+        <div class="main-content">
+            <div class="content-block">
+                {% if resource.type == twitter %}
+                <h2 class="resource-title">{{resource.name}}</h2>
+                <p class="card-text">{{resource.description}}</p>
+                <p class="card-text">{{resource.tags}}</p>
+                <p class="card-text">{{resource.link}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
 </body>
 </html>
