@@ -5,5 +5,22 @@ Road map
 create a page for admins to view all resources and update
 resource model and controller
 
-TO ADD:
-Pop Up form for submitting suggestion
+Front-End
+Home:
+- Suggest a Resource form
+Resource Pages:
+- Copy over header
+- Design resource displays
+Admindash
+Edit Resource Page
+Resource Lists
+
+
+Back-End
+Build Routes
+Suggestion Form
+
+
+Database
+Figure out how to manage tags
+Is there a relationship between admins & suggestions?
