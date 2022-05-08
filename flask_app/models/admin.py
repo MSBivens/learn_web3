@@ -4,7 +4,7 @@ EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 from flask import flash
 
 class Admin:
-    db_name = "web3_resources"
+    db = "web3_resources"
     def __init__(self,data):
         self.id = data['id']
         self.username = data['username']
@@ -16,12 +16,12 @@ class Admin:
     @classmethod
     def save(cls,data):
         query = "INSERT INTO admins (username,email,password) VALUES(%(username)s,%(email)s,%(password)s)"
-        return connectToMySQL(cls.db_name).query_db(query,data)
+        return connectToMySQL(cls.db).query_db(query,data)
 
     @classmethod
     def get_all(cls):
         query = "SELECT * FROM admins;"
-        results = connectToMySQL(cls.db_name).query_db(query)
+        results = connectToMySQL(cls.db).query_db(query)
         admins = []
         for row in results:
             admins.append( cls(row))
@@ -30,7 +30,7 @@ class Admin:
     @classmethod
     def get_by_email(cls,data):
         query = "SELECT * FROM admins WHERE email = %(email)s;"
-        results = connectToMySQL(cls.db_name).query_db(query,data)
+        results = connectToMySQL(cls.db).query_db(query,data)
         if len(results) < 1:
             return False
         return cls(results[0])
@@ -38,14 +38,14 @@ class Admin:
     @classmethod
     def get_by_id(cls,data):
         query = "SELECT * FROM admins WHERE id = %(id)s;"
-        results = connectToMySQL(cls.db_name).query_db(query,data)
+        results = connectToMySQL(cls.db).query_db(query,data)
         return cls(results[0])
 
     @staticmethod
     def validate_register(admin):
         is_valid = True
         query = "SELECT * FROM admins WHERE email = %(email)s;"
-        results = connectToMySQL(Admin.db_name).query_db(query,admin)
+        results = connectToMySQL(Admin.db).query_db(query,admin)
         if len(results) >= 1:
             flash("Email already taken.","register")
             is_valid=False
