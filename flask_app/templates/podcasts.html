@@ -7,9 +7,88 @@
     <title>Learn Web3</title>
 </head>
 <body>
-    <header></header>
-    <main class="container">
-        <div class="main-content">
+    <header class="bg-gray-600 px-3 py-1">
+        <span class="lg:container lg:mx-auto flex justify-between">
+            <h1 class="font-bold text-white m-0 lg:text-3xl">Learn Web3</h1>
+            <nav class="flex font-light text-white m-0">
+                <div class="mr-8">
+                    <div class="dropdown inline-block relative">
+                        <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+                            <span class="mr-1">Find a Resource</span>
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                        </button>
+                        <ul class="z-10 dropdown-menu absolute hidden text-gray-700 pt-1">
+                            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/podcasts">Podcasts</a></li>
+                            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/newsletters">Newsletters</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/discords">Discords</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/twitters">Twitters</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/dev">4Devs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <button class="items-center inline-flex block font-semibold rounded px-4 py-2 items-center bg-gray-300 text-gray-700 " type="button" data-modal-toggle="authentication-modal">
+                        Suggest a Resource
+                    </button>
+                    <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+                        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                <div class="py-6 px-6 lg:px-8">
+                                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Suggest a resource for others</h3>
+                                    <form class="space-y-6" action="/create/suggestion" method="post">
+                                        <div>
+                                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">What is the resource?</label>
+                                            <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Web3 Talks" required="">
+                                        </div>
+                                        <div>
+                                            <label for="link" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Link to the resource</label>
+                                            <input type="link" name="link" id="link" placeholder="www.somepodcast.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5">
+                                                    <input id="type" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                </div>
+                                                <label for="podcast" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Podcast</label>
+                                                <div class="flex items-center h-5">
+                                                    <input id="type" type="checkbox" value="" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                </div>
+                                                <label for="newsletter" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Newsletter</label>
+                                                <div class="flex items-center h-5">
+                                                    <input id="type" type="checkbox" value="" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                </div>
+                                                <label for="discord" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Discord</label>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <div class="flex justify-between">
+                                                <div class="flex items-center h-5">
+                                                    <input id="type" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                </div>
+                                                <label for="twitter" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Twitter</label>
+                                                <div class="flex items-center h-5">
+                                                    <input id="type" type="checkbox" value="" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                </div>
+                                                <label for="4devs" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">4Devs</label>
+                                            </div>
+                                        </div>
+                                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                Submit Your Suggestion
+                                            </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+    </header> 
+    <main class="lg:container lg:mx-auto mt-16">
+        <div class="grid gap-16 grid-cols-3 mt-5 justify-items-center">
             <div class="content-block">
                 {% if resource.type == podcast %}
                 <h2 class="resource-title">{{resource.name}}</h2>
@@ -20,5 +99,6 @@
             </div>
         </div>
     </main>
+    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 </body>
 </html>
