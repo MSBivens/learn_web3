@@ -21,11 +21,11 @@
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
                         </button>
                         <ul class="z-10 dropdown-menu absolute hidden text-gray-700 pt-1">
-                            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Podcasts</a></li>
-                            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Newsletters</a></li>
-                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Discords</a></li>
-                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Twitters</a></li>
-                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">4Devs</a></li>
+                            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/podcasts">Podcasts</a></li>
+                            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/newsletters">Newsletters</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/discords">Discords</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/twitters">Twitters</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/dev">4Devs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +40,8 @@
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                 </button>
                                 <div class="py-6 px-6 lg:px-8">
-                                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+                                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Suggest a resource for others</h3>
+                                    <!-- Build out form -->
                                     <form class="space-y-6" action="#">
                                         <div>
                                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
@@ -57,12 +58,10 @@
                                                 </div>
                                                 <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                                             </div>
-                                            <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
                                         </div>
-                                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
-                                        <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                            Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-                                        </div>
+                                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                Submit Your Suggestion
+                                            </button>
                                     </form>
                                 </div>
                             </div>
@@ -76,26 +75,25 @@
         <div class="grid gap-16 grid-cols-3 mt-5 justify-items-center">
             <div class="relative">
                 <img src= {{ url_for('static', filename = 'images/img_podcasts.png') }} alt="podcasts" class="opacity-25">
-                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold">Podcasts</p>
+                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold hover:underline hover:scale-x-105"><a href="/podcasts">Podcasts</a></p>
             </div>
             <div class="relative">
                 <img src= {{ url_for('static', filename = 'images/img_newsletters.png') }} alt="newsletters" class="opacity-25">
-                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold">Newsletters</p>
+                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold hover:underline hover:scale-x-105"><a href="/newsletters">Newsletters</a></p>
             </div>
             <div class="relative">
                 <img src= {{ url_for('static', filename = 'images/img_discord.png') }} alt="discord" class="opacity-25">
-                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold">Discords</p>
+                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold hover:underline hover:scale-x-105"><a href="/discords">Discords</a></p>
             </div>
             <div class="relative">
                 <img src= {{ url_for('static', filename = 'images/img_twitter.png') }} alt="twitter" class="opacity-25">
-                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold">Twitters</p>
+                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold hover:underline hover:scale-x-105"><a href="/twitters">Twitters</a></p>
             </div>
             <div class="relative">
                 <img src= {{ url_for('static', filename = 'images/img_dev.png') }} alt="dev" class="opacity-25">
-                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold">4Devs</p>
+                <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-extrabold hover:underline hover:scale-x-105"><a href="/dev">4Devs</a></p>
             </div>
         </div>
-        
     </main>
     <!-- <script src="{{url_for('static', filename='script.js')}}"></script> -->
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
