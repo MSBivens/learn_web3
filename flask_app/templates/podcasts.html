@@ -88,14 +88,16 @@
         </span>
     </header> 
     <main class="lg:container lg:mx-auto mt-16">
-        <div class="grid gap-16 grid-cols-3 mt-5 justify-items-center">
-            <div class="content-block">
-                {% if resource.type == podcast %}
-                <h2 class="resource-title">{{resource.name}}</h2>
-                <p class="card-text">{{resource.description}}</p>
-                <p class="card-text">{{resource.tags}}</p>
-                <p class="card-text">{{resource.link}}</p>
-                {% endif %}
+        <div class="grid gap-16 grid-cols-3 mt-5">
+            <div class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
+                <div class="w-3/5 mr-0">
+                    {% if resource.type == podcast %}
+                    <h2 class="text-gray-800 font-bold">{{resource.name}}</h2>
+                    <p class="">{{resource.description}}</p>
+                    <p class="">{{resource.tags}}</p>
+                    <p class="">{{resource.link}}</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </main>
