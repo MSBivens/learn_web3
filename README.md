@@ -6,12 +6,12 @@ create a page for admins to view all resources and update
 resource model and controller
 
 Front-End
-Home:
-- Suggest a Resource form
 Resource Pages:
 - Copy over header
 - Design resource displays
-Admindash
+Admin Styling
+Admindash Styling
+- Line 14 div, border around "Create a Resource" form?
 Edit Resource Page
 Resource Lists
 

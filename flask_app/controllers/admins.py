@@ -5,15 +5,15 @@ from flask_app.models.suggestion import Suggestion
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
-@app.route('/')
-def index():
-    return render_template('home.html')
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 
 @app.route('/register',methods=['POST'])
 def register():
-
     if not Admin.validate_register(request.form):
-        return redirect('/')
+        return redirect('/admin')
     data ={ 
         "username": request.form['username'],
         "email": request.form['email'],
@@ -21,13 +21,11 @@ def register():
     }
     id = Admin.save(data)
     session['admin_id'] = id
-
     return redirect('/dashboard')
 
 @app.route('/login',methods=['POST'])
 def login():
     admin = Admin.get_by_email(request.form)
-
     if not admin:
         flash("Invalid Email","login")
         return redirect('/')
