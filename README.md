@@ -15,7 +15,7 @@ Home
 Resource Pages:
 - Copy over resource tables from Podcasts
 - Copy over styling links from Podcasts
-- Home Button in header
+- Copy over Home Button in header
 
 Database
 - How to handle tags?
