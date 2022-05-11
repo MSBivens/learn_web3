@@ -15,6 +15,7 @@ Home
 Resource Pages:
 - Copy over resource tables from Podcasts
 - Copy over styling links from Podcasts
+- Home Button in header
 
 Database
 - How to handle tags?
@@ -24,8 +25,6 @@ Readme
 - Getting Started -> Prerequisites?
 - Product Screenshot 
 - Video Demo?
-- MIT License
-
 
 
 <div id="top"></div>
