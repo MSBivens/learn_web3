@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Web3</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 </head>
 <body>
     <header class="bg-gray-600 px-3 py-1">
@@ -87,16 +90,51 @@
             </nav>
         </span>
     </header> 
-    <main class="lg:container lg:mx-auto mt-16">
-        <div class="grid gap-16 grid-cols-3 mt-5">
-            <div class="transition duration-500 ease-in-out flex py-3 px-2 hover:bg-blue-400 transform hover:-translate-y-1 hover:scale-110 hover:text-white hover:shadow-none hover:rounded border border-gray-300 shadow-lg">
-                <div class="w-3/5 mr-0">
-                    {% if resource.type == podcast %}
-                    <h2 class="text-gray-800 font-bold">{{resource.name}}</h2>
-                    <p class="">{{resource.description}}</p>
-                    <p class="">{{resource.tags}}</p>
-                    <p class="">{{resource.link}}</p>
-                    {% endif %}
+    <main class="lg:container lg:mx-auto mt-16 flex justify-center">
+        <div class="w-full md:w-1/2 px-3 border-2 border-black rounded">
+            <h3>Web3 Podcasts</h3>
+            <div class="flex flex-col">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                            <table class="min-w-full">
+                                <thead class="bg-white border-b">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Name
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Description
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Link
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Tags
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for podcasts in resources %}
+                                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                            {{podcasts.name}}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{podcasts.description}}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <a href="{{podcasts.link}}">Link</a>
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{podcasts.tags}}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Web3</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 </head>
 <body>
-    <main class="container">
-        <div class="login-container">
+    <main class="lg:container lg:mx-auto mt-16 flex justify-center">
+        <div class="w-max px-3 mb-6 md:mb-0 mr-48 w-3/12">
             <form action="/register" method="POST" class="">
                 <h2>Register</h2>
                 {% with messages = get_flashed_messages(category_filter=['register']) %}
                     {% if messages %}
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert" role="alert">
                         <strong>Something went wrong!</strong>
                             {% for message in messages %}
                             <p>{{message}}</p>
@@ -22,24 +24,26 @@
                     </div>
                     {% endif %}
                 {% endwith %}
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" class="form-control" placeholder="Username">
+                <div class="mb-6">
+                    <label for="username" class="block mb-2 text-sm font-medium text-black">User name</label>
+                    <input type="text" id="username" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Uzumaki7" required="" />
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" class="form-control" placeholder="Email">
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-black">Your email</label>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="naruto@konohagakure.com" required="">
                 </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password">
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-sm font-medium text-black">Your password</label>
+                    <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
                 </div>
-                <div class="form-group">
-                    <label for="confirm">Confirm Password:</label>
-                    <input type="password" name="confirm" class="form-control" placeholder="Confirm Password">
+                <div class="mb-6">
+                    <label for="repeat-password" class="block mb-2 text-sm font-medium text-black">Repeat password</label>
+                    <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
                 </div>
-                <input type="submit" value="Register" class="btn btn-primary">
+                <button type="submit" value="register" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register new account</button>
             </form>
+        </div>
+        <div class="w-max px-3 mb-6 md:mb-0 w-3/12">
             <form action="/login" method="post" class="">
                 <h2>Login</h2>
                 {% with messages = get_flashed_messages(category_filter=['login']) %}
@@ -52,17 +56,19 @@
                     </div>
                     {% endif %}
                 {% endwith %}
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" class="form-control" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password">
-                </div>
-                <input type="submit" value="Login" class="btn btn-success">
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-black ">Your email</label>
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="naruto@konohagakure.com" required="">
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block mb-2 text-sm font-medium text-black">Your password</label>
+                        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
+                    </div>
+                    <button type="submit" value="login" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
             </form>
         </div>
     </main>
 </body>
 </html>
+
+
