@@ -30,11 +30,11 @@ Readme
 
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][https://github.com/MSBivens/learn_web3/graphs/contributors]
-[![Forks][forks-shield]][https://github.com/MSBivens/learn_web3/network/members]
-[![Issues][issues-shield]][https://github.com/MSBivens/learn_web3/issues]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/msbivens/]
+[![Contributors][contributors-shield]](https://github.com/MSBivens/learn_web3/graphs/contributors)
+[![Forks][forks-shield]](https://github.com/MSBivens/learn_web3/network/members)
+[![Issues][issues-shield]](https://github.com/MSBivens/learn_web3/issues)
+[![MIT License][license-shield]](license-url)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/msbivens/)
 
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
