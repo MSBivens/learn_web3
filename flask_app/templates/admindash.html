@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 </head>
 <body>
-    <main class="lg:container lg:mx-auto mt-16">
-        <div class="">
+    <main class="lg:container lg:mx-auto mt-16 flex">
+        <div class="w-max px-3 mb-6 md:mb-0 border-2 border-black rounded mr-5">
             <h3>Create a Resource</h3>
             <form action="/create/resource" method="post" class="w-full max-w-lg">
                 {% with messages = get_flashed_messages(category_filter=['resources']) %}
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <fieldset>
+                <fieldset class="grid grid-cols-3 gap-1 justify-evenly">
                     <legend class="sr-only">Checkbox variants</legend>
                     <div class="flex items-center mb-4">
                         <input id="checkbox-1" type="checkbox" value="web3" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
@@ -79,55 +79,62 @@
                 </fieldset>
                 <label for="description" class="block mb-2 text-sm font-medium text-black">Description:</label>
                 <textarea id="description" rows="4" class="block p-2.5 w-full text-sm rounded-lg border border-gray-300 bg-gray-300 border-gray-600 placeholder-gray-400 text-black" placeholder="250 Max Character Description"></textarea>
-
-
-
-
-        </div>
-                        <div class="form-group">
-                            <label for="link">Link:</label>
-                            <input type="text" name="link" class="form-control">
-                        </div>
-                    </div>
+                <div class="w-full mb-6 my-3">
+                    <label for="link" class="block tracking-wide text-black text-xs font-bold mb-2">
+                        Resource Link:
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight" id="link" type="text" placeholder="www.example.com">
                 </div>
             </form>
         </div>
-        <div class="suggested-resources">
-            <h4>Suggested Resources</h4>
-            <table class="">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Name</th>
-                        <th>Link</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for suggestion in suggestions %}
-                    <tr>
-                        <td>{{sugesstions.type}}</td>
-                        <td>{{suggestions.name}}</td>
-                        <td>{{suggestions.link}}</td>
-                        <td>
-                            <a href="/destroy/suggestions/{{suggestions.id}}">Delete</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
+        <div class="w-full md:w-1/2 px-3 border-2 border-black rounded">
+            <h3>Suggested Resources</h3>
+            <div class="flex flex-col">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                            <table class="min-w-full">
+                                <thead class="bg-white border-b">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Type
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Name
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Link
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Delete
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for suggestion in suggestions %}
+                                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                            {{sugesstions.type}}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{suggestions.name}}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            {{suggestions.link}}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <a href="/destroy/suggestions/{{suggestions.id}}">Delete</a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
