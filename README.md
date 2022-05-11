@@ -30,12 +30,11 @@ Readme
 
 <div id="top"></div>
 
-[![Contributors][contributors-shield]](https://github.com/MSBivens/learn_web3/graphs/contributors)
-[![Forks][forks-shield]](https://github.com/MSBivens/learn_web3/network/members)
-[![Issues][issues-shield]](https://github.com/MSBivens/learn_web3/issues)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]](license-url)
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/msbivens/)
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
@@ -226,16 +225,14 @@ Project Link: [https://github.com/MSBivens/learn_web3](https://github.com/MSBive
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/MSBivens/learn_web3.svg?style=for-the-badge
+[contributors-url]: https://github.com/MSBivens/learn_web3/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MSBivens/learn_web3.svg?style=for-the-badge
+[forks-url]: https://github.com/MSBivens/learn_web3/network/members
 [issues-shield]: https://img.shields.io/github/issues/MSBivens/learn_web3.svg?style=for-the-badge
 [issues-url]: https://github.com/MSBivens/learn_web3/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/MSBivens/learn_web3.svg?style=for-the-badge
+[license-url]: https://github.com/MSBivens/learn_web3/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/msbivens
 [product-screenshot]: images/screenshot.png
