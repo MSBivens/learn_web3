@@ -9,7 +9,6 @@ bcrypt = Bcrypt(app)
 def admin():
     return render_template('admin.html')
 
-
 @app.route('/register',methods=['POST'])
 def register():
     if not Admin.validate_register(request.form):

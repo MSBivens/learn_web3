@@ -23,6 +23,7 @@ def create_resource():
         "name": request.form["name"],
         "description": request.form["description"],
         "link": request.form["link"],
+        "type": request.form["type"]
     }
     Resource.save(data)
     return redirect('/dashboard')

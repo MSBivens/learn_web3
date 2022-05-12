@@ -17,10 +17,6 @@ Resource Pages:
 - Copy over styling links from Podcasts
 - Copy over Home Button in header
 
-Database
-- How to handle tags?
-- Is there a relationship between admins & suggestions?
-
 Readme
 - Getting Started -> Prerequisites?
 - Product Screenshot 
