@@ -11,6 +11,7 @@ def admin():
 
 @app.route('/register',methods=['POST'])
 def register():
+    print(request.form)
     if not Admin.validate_register(request.form):
         return redirect('/admin')
     data ={ 
@@ -24,6 +25,7 @@ def register():
 
 @app.route('/login',methods=['POST'])
 def login():
+    print(request.form)
     admin = Admin.get_by_email(request.form)
     if not admin:
         flash("Invalid Email","login")

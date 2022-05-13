@@ -31,6 +31,9 @@ class Admin:
     def get_by_email(cls,data):
         query = "SELECT * FROM admins WHERE email = %(email)s;"
         results = connectToMySQL(cls.db).query_db(query,data)
+        print("//////////////////")
+        print(results)
+        print("//////////////////")
         if len(results) < 1:
             return False
         return cls(results[0])
@@ -46,6 +49,9 @@ class Admin:
         is_valid = True
         query = "SELECT * FROM admins WHERE email = %(email)s;"
         results = connectToMySQL(Admin.db).query_db(query,admin)
+        print("//////////////////")
+        print(results)
+        print("//////////////////")
         if len(results) >= 1:
             flash("Email already taken.","register")
             is_valid=False

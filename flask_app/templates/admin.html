@@ -12,7 +12,7 @@
 <body>
     <main class="lg:container lg:mx-auto mt-16 flex justify-center">
         <div class="w-max px-3 mb-6 md:mb-0 mr-48 w-3/12">
-            <form action="/register" method="POST" class="">
+            <form action="/register" method="post" class="">
                 <h2>Register</h2>
                 {% with messages = get_flashed_messages(category_filter=['register']) %}
                     {% if messages %}
@@ -26,21 +26,21 @@
                 {% endwith %}
                 <div class="mb-6">
                     <label for="username" class="block mb-2 text-sm font-medium text-black">User name</label>
-                    <input type="text" id="username" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Uzumaki7" required="" />
+                    <input type="text" id="username" name="username" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Uzumaki7" required="" />
                 </div>
                 <div class="mb-6">
                     <label for="email" class="block mb-2 text-sm font-medium text-black">Your email</label>
-                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="naruto@konohagakure.com" required="">
+                    <input type="email" id="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="naruto@konohagakure.com" required="">
                 </div>
                 <div class="mb-6">
                     <label for="password" class="block mb-2 text-sm font-medium text-black">Your password</label>
-                    <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
+                    <input type="password" id="password" name="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
                 </div>
                 <div class="mb-6">
-                    <label for="repeat-password" class="block mb-2 text-sm font-medium text-black">Repeat password</label>
-                    <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
+                    <label for="confirm" class="block mb-2 text-sm font-medium text-black">Repeat password</label>
+                    <input type="password" id="confirm" name="confirm" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required="">
                 </div>
-                <button type="submit" value="register" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register new account</button>
+                <button type="submit" value="Register" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register new account</button>
             </form>
         </div>
         <div class="w-max px-3 mb-6 md:mb-0 w-3/12">
