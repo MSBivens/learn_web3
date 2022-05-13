@@ -29,14 +29,14 @@
                         <label for="name" class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Resource Name:
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight" id="name" type="text" placeholder="Web3 Talks">
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight" id="name" type="text" name="name" placeholder="Web3 Talks">
                     </div>
                     <div class="w-full md:w-1/2 px-3">
                         <label for="resource-type" class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Resource Type:
                         </label>
                         <div class="relative">
-                            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="resource-type">
+                            <select name="type" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="resource-type">
                                 <option>Podcast</option>
                                 <option>Newsletter</option>
                                 <option>Discord</option>
@@ -47,44 +47,45 @@
                     </div>
                 </div>
                 <fieldset class="grid grid-cols-3 gap-1 justify-evenly">
-                    <legend class="sr-only">Checkbox variants</legend>
+                    <legend class="sr-only"></legend>
                     <div class="flex items-center mb-4">
-                        <input id="web3" type="checkbox" value="web3" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="web3" type="checkbox" value="Web3" name="web3" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="web3" class="ml-2 text-sm font-medium text-black">Web3</label>
                     </div>
                     <div class="flex items-center mb-4">
-                        <input id="interviews" type="checkbox" value="interviews" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="interviews" type="checkbox" value="Interviews" name="interviews" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="interviews" class="ml-2 text-sm font-medium text-black">Interviews</label>
                     </div>
                     <div class="flex items-center mb-4">
-                        <input id="nfts" type="checkbox" value="nfts" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="nfts" type="checkbox" value="NFTs" name="nfts" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="nfts" class="ml-2 text-sm font-medium text-black">NFTs</label>
                     </div>
                     <div class="flex items-center mb-4">
-                        <input id="smart_contracts" type="checkbox" value="smart_contracts" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="smart_contracts" type="checkbox" value="Smart Contracts" name="smart_contracts" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="smart_contracts" class="ml-2 text-sm font-medium text-black">Smart Contracts</label>
                     </div>
                     <div class="flex items-center mb-4">
-                        <input id="blockchain" type="checkbox" value="blockchain" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="blockchain" type="checkbox" value="Blockchain" name="blockchain" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="blockchain" class="ml-2 text-sm font-medium text-black">Blockchain</label>
                     </div>
                     <div class="flex items-center mb-4">
-                        <input id="crypto" type="checkbox" value="crypto" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="crypto" type="checkbox" value="Crypto" name="crypto" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="crypto" class="ml-2 text-sm font-medium text-black">Crypto</label>
                     </div>
                     <div class="flex items-center mb-4">
-                        <input id="metaverse" type="checkbox" value="metaverse" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
+                        <input id="metaverse" type="checkbox" value="Metaverse" name="metaverse" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:border-gray-600">
                         <label for="metaverse" class="ml-2 text-sm font-medium text-black">Metaverse</label>
                     </div>
                 </fieldset>
                 <label for="description" class="block mb-2 text-sm font-medium text-black">Description:</label>
-                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm rounded-lg border border-gray-300 bg-gray-300 border-gray-600 placeholder-gray-400 text-black" placeholder="250 Max Character Description"></textarea>
+                <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm rounded-lg border border-gray-300 bg-gray-300 border-gray-600 placeholder-gray-400 text-black" placeholder="250 Max Character Description"></textarea>
                 <div class="w-full mb-6 my-3">
                     <label for="link" class="block tracking-wide text-black text-xs font-bold mb-2">
                         Resource Link:
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight" id="link" type="text" placeholder="www.example.com">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight" id="link" type="text" name="link" placeholder="www.example.com">
                 </div>
+                <button type="submit" value="create" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
             </form>
         </div>
         <div class="w-full md:w-1/2 px-3 border-2 border-black rounded">

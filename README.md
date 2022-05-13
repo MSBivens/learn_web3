@@ -5,10 +5,6 @@ Admindash
 - Test Create Form
 - Display username of logged in admin
 
-Admin
-- Test Log-In Form
-- Test Log Out Form
-
 Home
 - Test Suggestion Form
 
