@@ -1,23 +1,15 @@
-To Work On:
-Admindash
-- Log-Out Button
-- Test Suggestions Display
-- Test Create Form
-- Display username of logged in admin
-
-Home
-- Test Suggestion Form
-
-Resource Pages:
-- Copy over resource tables from Podcasts
-- Copy over styling links from Podcasts
-- Copy over Home Button in header
+Final Pieces:
+- Copy Suggestion Form to Home
+- Copy Podcasts to other resource pages + edit
+- Final readthrough of code 
 
 Readme
 - Getting Started -> Prerequisites?
 - Product Screenshot 
 - Video Demo?
 
+HELP:
+Reource tables in pages not showing content
 
 <div id="top"></div>
 
@@ -161,7 +153,7 @@ This project could be forked and used to display resources for any number of sub
 - [ ] Update to deployment ready version
 - [ ] Overhaul graphics and visuals
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/MSBivens/learn_web3/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
