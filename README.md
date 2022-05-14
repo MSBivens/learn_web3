@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+[![Product Name Screen Shot][product-screenshot]][product-screenshot]
 
 This project was built to support poeple curious about Web3 topics or looking for new resources to learn about it's various components through differnet forms of media; e.g. podcasts, newsletters, popular Twitter profiles. 
 
