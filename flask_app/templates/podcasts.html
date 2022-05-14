@@ -55,32 +55,18 @@
                                             <label for="link" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Link to the resource</label>
                                             <input type="link" name="link" id="link" placeholder="www.somepodcast.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
                                         </div>
-                                        <div class="flex justify-between">
-                                            <div class="flex items-start">
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="Podcast" name="type" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
-                                                </div>
-                                                <label for="type" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Podcast</label>
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="Newsletter" name="type" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
-                                                </div>
-                                                <label for="newsletter" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Newsletter</label>
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="Discord" name="type" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
-                                                </div>
-                                                <label for="discord" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Discord</label>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <div class="flex justify-between">
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="Twitter" name="type" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
-                                                </div>
-                                                <label for="twitter" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Twitter</label>
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="4Devs" name="type" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800">
-                                                </div>
-                                                <label for="4devs" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">4Devs</label>
+                                        <div>
+                                            <label for="resource-type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                                Resource Type:
+                                            </label>
+                                            <div class="relative">
+                                                <select name="type" name="type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="resource-type">
+                                                    <option>Podcast</option>
+                                                    <option>Newsletter</option>
+                                                    <option>Discord</option>
+                                                    <option>Twitter</option>
+                                                    <option>Dev</option>
+                                                </select>
                                             </div>
                                         </div>
                                             <button type="submit" value="" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -126,11 +112,11 @@
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                                 {{resource.name}}
                                             </td>
-                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4">
                                                 {{resource.description}}
                                             </td>
                                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                <a href="{{resource.link}}">Link</a>
+                                                <a href="https://{{resource.link}}">Link</a>
                                             </td>
                                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                                 {{resource.tags}}
