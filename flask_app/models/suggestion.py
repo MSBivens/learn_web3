@@ -8,7 +8,6 @@ class Suggestion:
         self.type = db_data['type']
         self.title = db_data['title']
         self.link = db_data['link']
-        self.type = db_data['type']
         self.created_at = db_data['created_at']
         self.updated_at = db_data['updated_at']
 

@@ -4,9 +4,6 @@ from flask_app.models.suggestion import Suggestion
 from flask_app.models.admin import Admin
 from flask_app.models.resource import Resource
 
-# How to make this from any user accessible page?
-# Is the answser to just delete any call to admin 
-# For redirect, send back to page user submitted resource from
 @app.route('/create/suggestion',methods=['POST'])
 def create_suggestion():
     data = {
