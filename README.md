@@ -1,16 +1,3 @@
-Final Pieces:
-- Copy Suggestion Form to Home
-- Copy Podcasts to other resource pages + edit
-- Final readthrough of code 
-
-Readme
-- Getting Started -> Prerequisites?
-- Product Screenshot 
-- Video Demo?
-
-HELP:
-Reource tables in pages not showing content
-
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
