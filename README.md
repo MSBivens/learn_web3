@@ -13,9 +13,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/MSBivens/learn_web3">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Learn Web3</h3>
 
@@ -136,7 +133,7 @@ This project could be forked and used to display resources for any number of sub
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Complete non-deployment ready final version
+- [X] Complete non-deployment ready final version
 - [ ] Update to deployment ready version
 - [ ] Overhaul graphics and visuals
 
@@ -205,4 +202,4 @@ Project Link: [https://github.com/MSBivens/learn_web3](https://github.com/MSBive
 [license-url]: https://github.com/MSBivens/learn_web3/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/msbivens
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: flask_app/static/images/learn_web3_cover.png
