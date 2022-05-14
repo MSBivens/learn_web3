@@ -64,7 +64,6 @@
 ## About The Project
 
 ![Screenshot of home page](https://github.com/MSBivens/learn_web3/blob/master/flask_app/static/images/learn_web3_cover.PNG)
-<!-- [![Product Name Screen Shot][product-screenshot]](https://github.com/MSBivens/learn_web3/blob/master/flask_app/static/images/learn_web3_cover.PNG) -->
 
 This project was built to support poeple curious about Web3 topics or looking for new resources to learn about it's various components through differnet forms of media; e.g. podcasts, newsletters, popular Twitter profiles. 
 
@@ -203,4 +202,3 @@ Project Link: [https://github.com/MSBivens/learn_web3](https://github.com/MSBive
 [license-url]: https://github.com/MSBivens/learn_web3/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/msbivens
-[product-screenshot]: flask_app/static/images/learn_web3_cover.png
