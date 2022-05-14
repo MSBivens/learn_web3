@@ -63,8 +63,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-[![Product Name Screen Shot][product-screenshot]](https://github.com/MSBivens/learn_web3/blob/master/flask_app/static/images/learn_web3_cover.PNG)
+![Screenshot of home page](https://github.com/MSBivens/learn_web3/blob/master/flask_app/static/images/learn_web3_cover.PNG)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://github.com/MSBivens/learn_web3/blob/master/flask_app/static/images/learn_web3_cover.PNG) -->
 
 This project was built to support poeple curious about Web3 topics or looking for new resources to learn about it's various components through differnet forms of media; e.g. podcasts, newsletters, popular Twitter profiles. 
 
