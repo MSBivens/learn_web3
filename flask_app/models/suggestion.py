@@ -22,11 +22,9 @@ class Suggestion:
         results =  connectToMySQL(cls.db).query_db(query)
         all_suggestions = []
         for row in results:
-            # print(row['date_made'])
             all_suggestions.append( cls(row) )
         return all_suggestions
     
-    # Do I need this?
     @classmethod
     def get_one(cls,data):
         query = "SELECT * FROM suggestions WHERE id = %(id)s;"
