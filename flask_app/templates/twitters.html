@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Web3</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 </head>
 <body>
     <header class="bg-gray-600 px-3 py-1">
         <span class="lg:container lg:mx-auto flex justify-between">
             <h1 class="font-bold text-white m-0 lg:text-3xl">Learn Web3</h1>
             <nav class="flex font-light text-white m-0">
+                <div class="max-w-2xl mx-auto mr-8">
+                    <button class="items-center inline-flex block font-semibold rounded px-4 py-2 items-center bg-gray-300 text-gray-700" type="button">
+                        <a href="/">Home</a>
+                    </button>
+                </div>
                 <div class="mr-8">
                     <div class="dropdown inline-block relative">
                         <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
@@ -47,35 +55,21 @@
                                             <label for="link" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Link to the resource</label>
                                             <input type="link" name="link" id="link" placeholder="www.somepodcast.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
                                         </div>
-                                        <div class="flex justify-between">
-                                            <div class="flex items-start">
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                                                </div>
-                                                <label for="podcast" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Podcast</label>
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                                                </div>
-                                                <label for="newsletter" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Newsletter</label>
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                                                </div>
-                                                <label for="discord" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Discord</label>
+                                        <div>
+                                            <label for="resource-type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                                Resource Type:
+                                            </label>
+                                            <div class="relative">
+                                                <select name="type" name="type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" id="resource-type">
+                                                    <option>Podcast</option>
+                                                    <option>Newsletter</option>
+                                                    <option>Discord</option>
+                                                    <option>Twitter</option>
+                                                    <option>Dev</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="flex justify-between">
-                                            <div class="flex justify-between">
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                                                </div>
-                                                <label for="twitter" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Twitter</label>
-                                                <div class="flex items-center h-5">
-                                                    <input id="type" type="checkbox" value="" class="ml-2 w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
-                                                </div>
-                                                <label for="4devs" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">4Devs</label>
-                                            </div>
-                                        </div>
-                                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            <button type="submit" value="" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                 Submit Your Suggestion
                                             </button>
                                     </form>
@@ -86,16 +80,55 @@
                 </div>
             </nav>
         </span>
-    </header> 
-    <main class="lg:container lg:mx-auto mt-16">
-        <div class="grid gap-16 grid-cols-3 mt-5">
-            <div class="content-block">
-                {% if resource.type == twitter %}
-                <h2 class="resource-title">{{resource.name}}</h2>
-                <p class="card-text">{{resource.description}}</p>
-                <p class="card-text">{{resource.tags}}</p>
-                <p class="card-text">{{resource.link}}</p>
-                {% endif %}
+    </header>
+    <main class="lg:container lg:mx-auto mt-16 flex justify-center">
+        <div class="w-full md:w-1/2 px-3 border-2 border-black rounded">
+            <h3>Web3 Twitter Accounts</h3>
+            <div class="flex flex-col">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                            <table class="min-w-full">
+                                <thead class="bg-white border-b">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Name
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Description
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Link
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        Tags
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for resource in resources %}
+                                    {% if resource.type == 'Twitter' %}
+                                        <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                                {{resource.name}}
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4">
+                                                {{resource.description}}
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                <a href="https://{{resource.link}}">Link</a>
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                {{resource.tags}}
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
