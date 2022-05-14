@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 </head>
 <body>
+    <header>
+        <div class="">
+            <p>Welcome {{admin.username}}</p>
+            <button value="logout" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"><a href="/logout">Logout</a></button>
+        </div>
+    </header>
     <main class="lg:container lg:mx-auto mt-16 flex justify-center">
         <div class="w-max px-3 mb-6 md:mb-0 border-2 border-black rounded mr-5">
             <h3>Create a Resource</h3>
