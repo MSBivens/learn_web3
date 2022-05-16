@@ -42,8 +42,6 @@ class Resource:
         query = "DELETE FROM resources WHERE id = %(id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
 
-# How to validate a link?
-# How to validate a checkbox (types)?
     @staticmethod
     def validate_resource(resource):
         is_valid = True
