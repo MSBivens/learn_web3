@@ -23,6 +23,6 @@ def discords():
 def twitters():
     return render_template("twitters.html",resources=Resource.get_all())
 
-@app.route('/4dev')
+@app.route('/dev')
 def dev():
     return render_template("4dev.html",resources=Resource.get_all())
