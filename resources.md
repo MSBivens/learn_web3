@@ -40,6 +40,25 @@ You are more then welcome to make a pull request and add a resource or category 
 | @iam_preethi | Entrepreneur, Engineer, Writer, and Student | https://twitter.com/iam_preethi |
 | @PatrickAlphaC |  Building Chainlink as #Blockend Engineer & Advocate | https://twitter.com/PatrickAlphaC |
 
+## Youtube
+| Name | Description | Link |
+| --- | --- | --- |
+| Dapp University | --- | (https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ) |
+| Eat the Blocks | --- | https://www.youtube.com/channel/UCZM8XQjNOyG2ElPpEUtNasA |
+| Patrick Collins | --- | https://www.youtube.com/channel/UCn-3f8tw_E1jZvhuHatROwA |
+| Austin Griffith | --- | https://www.youtube.com/channel/UC_HI2i2peo1A-STdG22GFsA |
+| Nader Dabit | --- | https://www.youtube.com/user/boyindasouth |
+
+## Community
+| Name | Description | Link |
+| --- | --- | --- |
+| Chainlink Discord | --- | https://discord.gg/2YHSAey |
+| Hardhat Discord | --- | https://discord.com/invite/TETZs2KK4k |
+| ConsenSys Discord | --- | https://consensys.net/blog/news/say-hello-to-the-consensys-discord/ |
+| Brownie Discord | --- | https://discord.gg/9zk7snTfWe |
+| Ethereum Discord | --- | https://ethereum.org/en/ |
+| Reddit ethdev | --- | https://www.reddit.com/r/ethdev/ |
+
 ## Dev
 | Name | Description | Link |
 | --- | --- | --- |
