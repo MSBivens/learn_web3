@@ -65,7 +65,7 @@
 
 ![Screenshot of home page](https://github.com/MSBivens/learn_web3/blob/master/flask_app/static/images/learn_web3_cover.PNG)
 
-This project was built to support poeple curious about Web3 topics or looking for new resources to learn about it's various components through differnet forms of media; e.g. podcasts, newsletters, popular Twitter profiles. 
+This project was built to support people curious about Web3 topics or looking for new resources to learn about its various components through different forms of media; e.g. podcasts, newsletters, and popular Twitter profiles. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
